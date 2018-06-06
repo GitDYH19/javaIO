@@ -1,0 +1,12 @@
+作用：RandomAccessFile类可以在文件中的任何位置查找和写入数据。
+    对于磁盘文件来说，都是随机访问的
+    对于网络而来的数据流却不是。
+打开一个随机文件，读或读写；"r","rw"
+RandomAccessFile in=new RandomAccessFile("emploee.txt","r");
+RandomAccessFile inOut=new RandomAccessFile("employee.txt","rw");
+
+*随机访问文件有一个表示下一个将读入或写出的字节所处位置的文件指针。
+**用seek方法可以将这个文件指针设置到文件中任意字节位置，其参数是一个long类型的整数，
+  它的值位于0到文件按字节来度量的长度之间
+getFilePointer方法将返回文件指针的当前位置；
+
