@@ -1,1 +1,15 @@
-以二进制写出数据
+以二进制写出数据:DataOutputStream
+以文本写出数据：PrintWriter  Scanner类似；
+在Java SE5.0之前，处理文本输入的唯一方式是使用BufferedReader，它拥有一个readLine()方法
+可以读入一行数据，在返回null时，读完。
+类似于：
+      BufferedReader br=new BufferedReader(new 
+        InputStreamReader(new FileInputStream("exp.txt"),UTF));
+      String line;
+      while((line=in.readLine())!=null){
+        System.out.println(line);
+      }
+      BufferedReader没有任何读入数字的方法，因此建议使用Scanner来读入文本；
+      
+      
+      
